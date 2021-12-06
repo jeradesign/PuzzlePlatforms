@@ -16,6 +16,9 @@ void AMovingPlatform::BeginPlay()
 
 	if (HasAuthority())
 	{
+		auto Location = GetActorLocation();
+		FVector GlobalTargetLocation = GetTransform().TransformPosition(Location);
+		Direction = (GlobalTargetLocation - Location).GetSafeNormal();
 		SetReplicates(true);
 		SetReplicateMovement(true);
 	}
@@ -33,7 +36,7 @@ void AMovingPlatform::Tick(float DeltaTime)
 
 	auto Location = GetActorLocation();
 
-	Location += FVector(Speed * DeltaTime, 0, 0);
+	Location += Speed * DeltaTime * Direction;
 
 	SetActorLocation(Location);
 }
