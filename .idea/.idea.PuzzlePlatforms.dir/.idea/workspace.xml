@@ -7,10 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a45b739b-79cf-4d4b-a700-72ccfd0ea900" name="Changes" comment="">
+    <list default="true" id="a45b739b-79cf-4d4b-a700-72ccfd0ea900" name="Changes" comment="After &quot;Sending The Platform Back&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PuzzlePlatforms.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PuzzlePlatforms.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/PuzzlePlatforms/MovingPlatform.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PuzzlePlatforms/MovingPlatform.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/PuzzlePlatforms/MovingPlatform.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PuzzlePlatforms/MovingPlatform.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ThirdPersonCPP/Blueprints/ThirdPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonCPP/Blueprints/ThirdPersonCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +102,7 @@
       <updated>1638582618765</updated>
       <workItem from="1638582639221" duration="2107000" />
       <workItem from="1638760253237" duration="6509000" />
-      <workItem from="1638842111849" duration="3313000" />
+      <workItem from="1638842111849" duration="5182000" />
     </task>
     <task id="LOCAL-00001" summary="After &quot;Detecting Where Code is Running&quot;">
       <created>1638762565717</created>
@@ -125,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638767259158</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="After &quot;Sending The Platform Back&quot;">
+      <created>1638845471697</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1638845471697</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +158,7 @@
     <MESSAGE value="After &quot;Detecting Where Code is Running&quot;" />
     <MESSAGE value="After &quot;Authority and Replication&quot;" />
     <MESSAGE value="After &quot;Widgets For FVector Properties&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="After &quot;Widgets For FVector Properties&quot;" />
+    <MESSAGE value="After &quot;Sending The Platform Back&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="After &quot;Sending The Platform Back&quot;" />
   </component>
 </project>
