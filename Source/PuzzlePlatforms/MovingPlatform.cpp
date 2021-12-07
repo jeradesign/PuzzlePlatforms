@@ -14,14 +14,18 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (HasAuthority())
+	if (!HasAuthority())
 	{
-		auto Location = GetActorLocation();
-		FVector GlobalTargetLocation = GetTransform().TransformPosition(Location);
-		Direction = (GlobalTargetLocation - Location).GetSafeNormal();
-		SetReplicates(true);
-		SetReplicateMovement(true);
+		return;
 	}
+
+	GlobalStartLocation = GetActorLocation();
+	GlobalTargetLocation = GetTransform().TransformPosition(TargetLocation);
+	DistanceToEnd = FVector::Distance(GlobalStartLocation, GlobalTargetLocation);
+	Direction = (GlobalTargetLocation - GlobalStartLocation).GetSafeNormal();
+	StartDirection = Direction;
+	SetReplicates(true);
+	SetReplicateMovement(true);
 }
 
 
@@ -37,6 +41,15 @@ void AMovingPlatform::Tick(float DeltaTime)
 	auto Location = GetActorLocation();
 
 	Location += Speed * DeltaTime * Direction;
-
-	SetActorLocation(Location);
+	float Dist = FVector::Distance(Location, GlobalStartLocation);
+	if (Dist > DistanceToEnd)
+	{
+		std::swap(GlobalTargetLocation, GlobalStartLocation);
+		Direction = (GlobalTargetLocation - GlobalStartLocation).GetSafeNormal();
+		SetActorLocation(GlobalStartLocation);
+	}
+	else
+	{
+		SetActorLocation(Location);
+	}
 }

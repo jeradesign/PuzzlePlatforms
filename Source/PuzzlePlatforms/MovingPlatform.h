@@ -21,11 +21,17 @@ public:
 
 	virtual void Tick(float DeltaTime) override;
 
-	FVector Direction;
 
 	UPROPERTY(EditAnywhere)
 	float Speed = 50;
 
 	UPROPERTY(EditAnywhere, Meta = (MakeEditWidget = true))
 	FVector TargetLocation;
+
+private:
+	FVector Direction;
+	FVector GlobalStartLocation;
+	FVector GlobalTargetLocation;
+	FVector StartDirection;
+	float DistanceToEnd = 0;
 };
