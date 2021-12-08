@@ -6,11 +6,17 @@
 UPuzzlePlatformsGameInstance::UPuzzlePlatformsGameInstance(const FObjectInitializer& ObjectInitializer)
 {
 	UE_LOG(LogTemp, Warning, TEXT("GameInstance Constructor"));
+	static ConstructorHelpers::FClassFinder<UUserWidget> TheMenuClass(TEXT("/Game/MenuSystem/WBP_MainMenu"));
+	if (TheMenuClass.Class != NULL)
+	{
+		MenuClass = TheMenuClass.Class;
+	}
 }
 
 void UPuzzlePlatformsGameInstance::Init()
 {
 	UE_LOG(LogTemp, Warning, TEXT("GameInstance Init"));
+	UE_LOG(LogTemp, Warning, TEXT("Class name: %s"), *(MenuClass->GetName()));
 }
 
 void UPuzzlePlatformsGameInstance::Host()
@@ -55,4 +61,3 @@ void UPuzzlePlatformsGameInstance::Join(const FString& IpAddr)
 	}
 	PlayerController->ClientTravel(*IpAddr, TRAVEL_Absolute);
 }
-

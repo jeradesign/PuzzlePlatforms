@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
+#include "Blueprint/UserWidget.h"
 #include "PuzzlePlatformsGameInstance.generated.h"
 
 /**
@@ -24,4 +25,7 @@ public:
 
 	UFUNCTION(Exec)
 	void Join(const FString& IpAddr);
+
+private:
+	TSubclassOf<UUserWidget> MenuClass;
 };
