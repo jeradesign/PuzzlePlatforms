@@ -26,6 +26,9 @@ public:
 	UFUNCTION(Exec)
 	void Join(const FString& IpAddr);
 
+	UFUNCTION(Exec, BlueprintCallable, Category="My Menu")
+	void LoadMenu();
+
 private:
 	TSubclassOf<UUserWidget> MenuClass;
 };

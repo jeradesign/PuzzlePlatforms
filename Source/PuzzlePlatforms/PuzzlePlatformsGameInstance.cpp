@@ -61,3 +61,21 @@ void UPuzzlePlatformsGameInstance::Join(const FString& IpAddr)
 	}
 	PlayerController->ClientTravel(*IpAddr, TRAVEL_Absolute);
 }
+
+void UPuzzlePlatformsGameInstance::LoadMenu()
+{
+	if (MenuClass == nullptr)
+	{
+		UE_LOG(LogTemp, Error, TEXT("MenuClass is nullptr!"));
+		return;
+	}
+	UUserWidget *MenuWidget(CreateWidget<UUserWidget>(this, MenuClass));
+	if (MenuWidget == nullptr)
+	{
+		UE_LOG(LogTemp, Error, TEXT("MenuWidget is nullptr!"));
+		return;
+	}
+
+	MenuWidget->AddToViewport();
+}
+
