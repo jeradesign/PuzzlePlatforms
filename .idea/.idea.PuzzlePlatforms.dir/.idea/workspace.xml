@@ -7,10 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a45b739b-79cf-4d4b-a700-72ccfd0ea900" name="Changes" comment="After &quot;Sending The Platform Back&quot;">
+    <list default="true" id="a45b739b-79cf-4d4b-a700-72ccfd0ea900" name="Changes" comment="After &quot;Set Up A Simple Puzzle&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PuzzlePlatforms.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PuzzlePlatforms.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPersonCPP/Blueprints/ThirdPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonCPP/Blueprints/ThirdPersonCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -102,7 +103,7 @@
       <updated>1638582618765</updated>
       <workItem from="1638582639221" duration="2107000" />
       <workItem from="1638760253237" duration="6509000" />
-      <workItem from="1638842111849" duration="5182000" />
+      <workItem from="1638842111849" duration="10858000" />
     </task>
     <task id="LOCAL-00001" summary="After &quot;Detecting Where Code is Running&quot;">
       <created>1638762565717</created>
@@ -132,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638845471697</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="After &quot;Set Up A Simple Puzzle&quot;">
+      <created>1638908232985</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638908232985</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,11 +162,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="After &quot;Detecting Where Code is Running&quot;" />
     <MESSAGE value="After &quot;Authority and Replication&quot;" />
     <MESSAGE value="After &quot;Widgets For FVector Properties&quot;" />
     <MESSAGE value="After &quot;Sending The Platform Back&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="After &quot;Sending The Platform Back&quot;" />
+    <MESSAGE value="After &quot;Set Up A Simple Puzzle&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="After &quot;Set Up A Simple Puzzle&quot;" />
   </component>
 </project>
