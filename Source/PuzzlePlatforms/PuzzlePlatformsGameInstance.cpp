@@ -47,12 +47,12 @@ void UPuzzlePlatformsGameInstance::Join(const FString& IpAddr)
 
 	Engine->AddOnScreenDebugMessage(0, 10.0f, FColor::Green, Message);
 
-	UWorld* World = GetWorld();
-	if (World == nullptr)
+	APlayerController* PlayerController = GetFirstLocalPlayerController();
+	if (PlayerController == nullptr)
 	{
-		UE_LOG(LogTemp, Error, TEXT("GetEngine() returned nullptr!"));
+		UE_LOG(LogTemp, Error, TEXT("GetFirstLocalPlayerController() returned nullptr!"));
 		return;
 	}
-	World->ServerTravel(IpAddr);
+	PlayerController->ClientTravel(*IpAddr, TRAVEL_Absolute);
 }
 
