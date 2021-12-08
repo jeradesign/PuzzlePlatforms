@@ -7,11 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a45b739b-79cf-4d4b-a700-72ccfd0ea900" name="Changes" comment="After &quot;Hosting Servers With ServerTravel&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PuzzlePlatforms.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PuzzlePlatforms.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/PuzzlePlatforms/PuzzlePlatformsGameInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PuzzlePlatforms/PuzzlePlatformsGameInstance.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="a45b739b-79cf-4d4b-a700-72ccfd0ea900" name="Changes" comment="After &quot;Create a Menu Blueprint&quot;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,9 +23,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/jbrewer/proj/Unreal/PuzzlePlatforms/Source/PuzzlePlatforms/PuzzlePlatformsGameInstance.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21nh9rvFCLTLmWbxleBkcwY8PQ2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -106,7 +99,8 @@
       <updated>1638582618765</updated>
       <workItem from="1638582639221" duration="2107000" />
       <workItem from="1638760253237" duration="6509000" />
-      <workItem from="1638842111849" duration="16443000" />
+      <workItem from="1638842111849" duration="16933000" />
+      <workItem from="1638994839712" duration="662000" />
     </task>
     <task id="LOCAL-00001" summary="After &quot;Detecting Where Code is Running&quot;">
       <created>1638762565717</created>
@@ -164,7 +158,21 @@
       <option name="project" value="LOCAL" />
       <updated>1638940208242</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="After &quot;Joining Servers With ClientTravel&quot;">
+      <created>1638941308289</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1638941308290</updated>
+    </task>
+    <task id="LOCAL-00010" summary="After &quot;Create a Menu Blueprint&quot;">
+      <created>1638996116291</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1638996116291</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +204,8 @@
     <MESSAGE value="After &quot;When To Use A GameInstance&quot; (Skipping Ahead)" />
     <MESSAGE value="After &quot;Console Commands With Exec&quot;" />
     <MESSAGE value="After &quot;Hosting Servers With ServerTravel&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="After &quot;Hosting Servers With ServerTravel&quot;" />
+    <MESSAGE value="After &quot;Joining Servers With ClientTravel&quot;" />
+    <MESSAGE value="After &quot;Create a Menu Blueprint&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="After &quot;Create a Menu Blueprint&quot;" />
   </component>
 </project>
