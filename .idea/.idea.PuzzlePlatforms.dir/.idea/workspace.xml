@@ -7,11 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a45b739b-79cf-4d4b-a700-72ccfd0ea900" name="Changes" comment="After &quot;Accessing UI Classes in C++&quot;">
+    <list default="true" id="a45b739b-79cf-4d4b-a700-72ccfd0ea900" name="Changes" comment="After &quot;Load And Display UMG In C++&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PuzzlePlatforms.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PuzzlePlatforms.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/PuzzlePlatforms/PuzzlePlatformsGameInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PuzzlePlatforms/PuzzlePlatformsGameInstance.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/PuzzlePlatforms/PuzzlePlatformsGameInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PuzzlePlatforms/PuzzlePlatformsGameInstance.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +41,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.8367347" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.20977597" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -109,7 +110,7 @@
       <workItem from="1638582639221" duration="2107000" />
       <workItem from="1638760253237" duration="6509000" />
       <workItem from="1638842111849" duration="16933000" />
-      <workItem from="1638994839712" duration="6941000" />
+      <workItem from="1638994839712" duration="9364000" />
     </task>
     <task id="LOCAL-00001" summary="After &quot;Detecting Where Code is Running&quot;">
       <created>1638762565717</created>
@@ -195,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639001015702</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="After &quot;Load And Display UMG In C++&quot;">
+      <created>1639003469254</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1639003469254</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +238,7 @@
     <MESSAGE value="After &quot;Joining Servers With ClientTravel&quot;" />
     <MESSAGE value="After &quot;Create a Menu Blueprint&quot;" />
     <MESSAGE value="After &quot;Accessing UI Classes in C++&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="After &quot;Accessing UI Classes in C++&quot;" />
+    <MESSAGE value="After &quot;Load And Display UMG In C++&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="After &quot;Load And Display UMG In C++&quot;" />
   </component>
 </project>
