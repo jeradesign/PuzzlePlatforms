@@ -17,8 +17,9 @@ class PUZZLEPLATFORMS_API UMainMenu : public UUserWidget
 
 public:
 	void SetMenuInterface(IMenuInterface* MenuInterface);
-
+	void ShowMenu(IMenuInterface* Target, APlayerController* LocalController);
 protected:
+	virtual void OnLevelRemovedFromWorld(ULevel* InLevel, UWorld* InWorld) override;
 	virtual bool Initialize() override;
 
 private:

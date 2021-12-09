@@ -10,7 +10,7 @@ UPuzzlePlatformsGameInstance::UPuzzlePlatformsGameInstance(const FObjectInitiali
 {
 	UE_LOG(LogTemp, Warning, TEXT("GameInstance Constructor"));
 	static ConstructorHelpers::FClassFinder<UUserWidget> TheMenuClass(TEXT("/Game/MenuSystem/WBP_MainMenu"));
-	if (TheMenuClass.Class != NULL)
+	if (TheMenuClass.Class != nullptr)
 	{
 		MenuClass = TheMenuClass.Class;
 	}
@@ -24,7 +24,7 @@ void UPuzzlePlatformsGameInstance::Init()
 
 void UPuzzlePlatformsGameInstance::Host()
 {
-	auto Engine(GetEngine());
+	const auto Engine(GetEngine());
 	MYCHECKNULL(Engine);
 
 	Engine->AddOnScreenDebugMessage(0, 10.0f, FColor::Green, "Hosting");
@@ -36,9 +36,9 @@ void UPuzzlePlatformsGameInstance::Host()
 
 void UPuzzlePlatformsGameInstance::Join(const FString& IpAddr)
 {
-	auto Engine(GetEngine());
+	const auto Engine(GetEngine());
 	MYCHECKNULL(Engine);
-	FString Message = "Joining: " + IpAddr;
+	const FString Message = "Joining: " + IpAddr;
 
 	Engine->AddOnScreenDebugMessage(0, 10.0f, FColor::Green, Message);
 
@@ -52,15 +52,8 @@ void UPuzzlePlatformsGameInstance::LoadMenu()
 	MYCHECKNULL(MenuClass);
 	UMainMenu* MenuWidget(CreateWidget<UMainMenu>(this, MenuClass));
 	MYCHECKNULL(MenuWidget);
-
-	MenuWidget->AddToViewport();
-	MenuWidget->SetMenuInterface(this);
-
-	auto LocalController = GetFirstLocalPlayerController();
+	const auto LocalController = GetFirstLocalPlayerController();
 	MYCHECKNULL(LocalController);
-	FInputModeUIOnly UIOnly;
-	UIOnly.SetWidgetToFocus(MenuWidget->TakeWidget());
-	UIOnly.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
-	LocalController->SetInputMode(UIOnly);
-	LocalController->SetShowMouseCursor(true);
+
+	MenuWidget->ShowMenu(this, LocalController);
 }
