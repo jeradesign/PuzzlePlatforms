@@ -17,15 +17,15 @@ class PUZZLEPLATFORMS_API UPuzzlePlatformsGameInstance : public UGameInstance, p
 	GENERATED_BODY()
 
 public:
-	UPuzzlePlatformsGameInstance(const FObjectInitializer& ObjectInitializer);
+	explicit UPuzzlePlatformsGameInstance(const FObjectInitializer& ObjectInitializer);
 
 	virtual void Init() override;
 
 	UFUNCTION(Exec)
-	void Host();
+	virtual void BeginHosting() override;
 
 	UFUNCTION(Exec)
-	void Join(const FString& IpAddr);
+	virtual void JoinServer(const FString& IpAddr) override;
 
 	UFUNCTION(Exec, BlueprintCallable, Category="My Menu")
 	void LoadMenu();

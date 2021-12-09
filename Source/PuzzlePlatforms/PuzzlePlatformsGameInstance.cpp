@@ -10,10 +10,8 @@ UPuzzlePlatformsGameInstance::UPuzzlePlatformsGameInstance(const FObjectInitiali
 {
 	UE_LOG(LogTemp, Warning, TEXT("GameInstance Constructor"));
 	static ConstructorHelpers::FClassFinder<UUserWidget> TheMenuClass(TEXT("/Game/MenuSystem/WBP_MainMenu"));
-	if (TheMenuClass.Class != nullptr)
-	{
-		MenuClass = TheMenuClass.Class;
-	}
+	MYCHECKNULL(TheMenuClass.Class);
+	MenuClass = TheMenuClass.Class;
 }
 
 void UPuzzlePlatformsGameInstance::Init()
@@ -22,7 +20,7 @@ void UPuzzlePlatformsGameInstance::Init()
 	UE_LOG(LogTemp, Warning, TEXT("Class name: %s"), *(MenuClass->GetName()));
 }
 
-void UPuzzlePlatformsGameInstance::Host()
+void UPuzzlePlatformsGameInstance::BeginHosting()
 {
 	const auto Engine(GetEngine());
 	MYCHECKNULL(Engine);
@@ -34,7 +32,7 @@ void UPuzzlePlatformsGameInstance::Host()
 	World->ServerTravel("/Game/ThirdPersonCPP/Maps/ThirdPersonExampleMap?listen");
 }
 
-void UPuzzlePlatformsGameInstance::Join(const FString& IpAddr)
+void UPuzzlePlatformsGameInstance::JoinServer(const FString& IpAddr)
 {
 	const auto Engine(GetEngine());
 	MYCHECKNULL(Engine);
