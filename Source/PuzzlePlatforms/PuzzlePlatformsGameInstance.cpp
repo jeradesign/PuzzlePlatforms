@@ -30,7 +30,6 @@ void UPuzzlePlatformsGameInstance::Host()
 
 	UWorld* World = GetWorld();
 	MYCHECKNULL(World);
-
 	World->ServerTravel("/Game/ThirdPersonCPP/Maps/ThirdPersonExampleMap?listen");
 }
 
@@ -54,4 +53,12 @@ void UPuzzlePlatformsGameInstance::LoadMenu()
 	MYCHECKNULL(MenuWidget);
 
 	MenuWidget->AddToViewport();
+
+	auto LocalController = GetFirstLocalPlayerController();
+	MYCHECKNULL(LocalController);
+	FInputModeUIOnly UIOnly;
+	UIOnly.SetWidgetToFocus(MenuWidget->TakeWidget());
+	UIOnly.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
+	LocalController->SetInputMode(UIOnly);
+	LocalController->SetShowMouseCursor(true);
 }
