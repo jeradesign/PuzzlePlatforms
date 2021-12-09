@@ -3,20 +3,21 @@
 
 #include "MainMenu.h"
 #include "Components/Button.h"
+#include "Components/EditableTextBox.h"
 #include "Components/WidgetSwitcher.h"
 #include "PuzzlePlatforms/MyCheckNull.h"
 
 bool UMainMenu::Initialize()
 {
-	bool result = Super::Initialize();
-	if (!result) { return false; }
+	const bool bResult = Super::Initialize();
+	if (!bResult) { return false; }
 
 	MYCHECKNULL2(EnterHostModeButton, return false);
 	EnterHostModeButton->OnClicked.AddDynamic(this, &UMainMenu::HostServer);
 	MYCHECKNULL2(ShowJoinMenuButton, return false);
 	ShowJoinMenuButton->OnClicked.AddDynamic(this, &UMainMenu::ShowJoinMenu);
-	// if (JoinGameButton == nullptr) { return false; }
-	// JoinGameButton->OnClicked.AddDynamic(this, &UMainMenu::JoinRemoteServer);
+	MYCHECKNULL2(JoinGameButton, return false);
+	JoinGameButton->OnClicked.AddDynamic(this, &UMainMenu::JoinRemoteServer);
 	MYCHECKNULL2(BackButton, return false);
 	BackButton->OnClicked.AddDynamic(this, &UMainMenu::GoBack);
 
@@ -39,6 +40,10 @@ void UMainMenu::ShowJoinMenu()
 
 void UMainMenu::JoinRemoteServer()
 {
+	MYCHECKNULL(IPAddressTextBox);
+	const auto IPString(IPAddressTextBox->Text.ToString());
+	UE_LOG(LogTemp, Warning, TEXT("IP Address: %s"), *IPString);
+	MenuInterface->JoinServer(IPString);
 }
 
 void UMainMenu::GoBack()
