@@ -20,4 +20,11 @@ bool UMainMenu::Initialize()
 void UMainMenu::HostServer()
 {
 	UE_LOG(LogTemp, Warning, TEXT("I'm gonna host a server!"));
+	MYCHECKNULL(MenuInterface);
+	MenuInterface->Host();
+}
+
+void UMainMenu::SetMenuInterface(IMenuInterface* TheMenuInterface)
+{
+	this->MenuInterface = TheMenuInterface;
 }

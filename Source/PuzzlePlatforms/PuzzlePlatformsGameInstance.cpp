@@ -4,6 +4,7 @@
 #include "PuzzlePlatformsGameInstance.h"
 
 #include "MyCheckNull.h"
+#include "MenuSystem/MainMenu.h"
 
 UPuzzlePlatformsGameInstance::UPuzzlePlatformsGameInstance(const FObjectInitializer& ObjectInitializer)
 {
@@ -49,10 +50,11 @@ void UPuzzlePlatformsGameInstance::Join(const FString& IpAddr)
 void UPuzzlePlatformsGameInstance::LoadMenu()
 {
 	MYCHECKNULL(MenuClass);
-	UUserWidget* MenuWidget(CreateWidget<UUserWidget>(this, MenuClass));
+	UMainMenu* MenuWidget(CreateWidget<UMainMenu>(this, MenuClass));
 	MYCHECKNULL(MenuWidget);
 
 	MenuWidget->AddToViewport();
+	MenuWidget->SetMenuInterface(this);
 
 	auto LocalController = GetFirstLocalPlayerController();
 	MYCHECKNULL(LocalController);
