@@ -27,9 +27,15 @@ private:
 	UPROPERTY(meta = (BindWidget))
 	class UButton *BackButton;
 
+	UPROPERTY(meta = (BindWidget))
+	class UButton *QuitButton;
+
 	UFUNCTION()
 	void GoToLobby();
 
 	UFUNCTION()
 	void ExitMenu();
+
+	UFUNCTION()
+	void QuitGame();
 };
