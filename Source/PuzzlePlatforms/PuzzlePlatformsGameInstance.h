@@ -30,6 +30,10 @@ public:
 	UFUNCTION(Exec, BlueprintCallable, Category="My Menu")
 	void LoadMenu();
 
+	UFUNCTION(Exec, BlueprintCallable, Category="My Menu")
+	void LoadInGameMenu();
+
 private:
 	TSubclassOf<UUserWidget> MenuClass;
+	TSubclassOf<UUserWidget> InGameMenuClass;
 };

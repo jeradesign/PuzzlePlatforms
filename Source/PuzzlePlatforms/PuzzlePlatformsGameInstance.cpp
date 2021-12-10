@@ -3,6 +3,7 @@
 
 #include "PuzzlePlatformsGameInstance.h"
 
+#include "InGameMenu.h"
 #include "MyCheckNull.h"
 #include "MenuSystem/MainMenu.h"
 
@@ -12,6 +13,10 @@ UPuzzlePlatformsGameInstance::UPuzzlePlatformsGameInstance(const FObjectInitiali
 	static ConstructorHelpers::FClassFinder<UUserWidget> TheMenuClass(TEXT("/Game/MenuSystem/WBP_MainMenu"));
 	MYCHECKNULL(TheMenuClass.Class);
 	MenuClass = TheMenuClass.Class;
+
+	static ConstructorHelpers::FClassFinder<UUserWidget> TheInGameMenu(TEXT("/Game/UI/WBP_InGameMenu"));
+	MYCHECKNULL(TheInGameMenu.Class);
+	InGameMenuClass = TheInGameMenu.Class;
 }
 
 void UPuzzlePlatformsGameInstance::Init()
@@ -53,5 +58,18 @@ void UPuzzlePlatformsGameInstance::LoadMenu()
 	const auto LocalController = GetFirstLocalPlayerController();
 	MYCHECKNULL(LocalController);
 
-	MenuWidget->ShowMenu(this, LocalController);
+	MenuWidget->SetMenuInterface(this);
+	MenuWidget->ShowMenu();
+}
+
+void UPuzzlePlatformsGameInstance::LoadInGameMenu()
+{
+	UE_LOG(LogTemp, Warning, TEXT("LoadInGameMenu"));
+	MYCHECKNULL(InGameMenuClass);
+	UMenuWidget* InGameMenuWidget(CreateWidget<UMenuWidget>(this, InGameMenuClass));
+	MYCHECKNULL(InGameMenuWidget);
+	const auto LocalController = GetFirstLocalPlayerController();
+	MYCHECKNULL(LocalController);
+
+	InGameMenuWidget->ShowMenu();
 }

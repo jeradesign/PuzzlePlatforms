@@ -57,20 +57,6 @@ void UMainMenu::SetMenuInterface(IMenuInterface* TheMenuInterface)
 	this->MenuInterface = TheMenuInterface;
 }
 
-void UMainMenu::ShowMenu(IMenuInterface* Target, APlayerController* LocalController)
-{
-	MYCHECKNULL(Target);
-	SetMenuInterface(Target);
-	AddToViewport();
-
-	MYCHECKNULL(LocalController);
-	FInputModeUIOnly UIOnly;
-	UIOnly.SetWidgetToFocus(TakeWidget());
-	UIOnly.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
-	LocalController->SetInputMode(UIOnly);
-	LocalController->SetShowMouseCursor(true);
-}
-
 void UMainMenu::OnLevelRemovedFromWorld(ULevel* InLevel, UWorld* InWorld)
 {
 	Super::OnLevelRemovedFromWorld(InLevel, InWorld);
