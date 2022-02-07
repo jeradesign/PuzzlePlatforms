@@ -33,7 +33,12 @@ void UPuzzlePlatformsGameInstance::Init()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("No online subsystem found"))
 	}
-	MYCHECKNULL(Online);
+
+	IOnlineSessionPtr SessionInterface = Online->GetSessionInterface();
+	if (!SessionInterface.IsValid())
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Session interface is invalid"))
+	}
 }
 
 void UPuzzlePlatformsGameInstance::BeginHosting()
