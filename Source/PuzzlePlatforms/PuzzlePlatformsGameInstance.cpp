@@ -6,6 +6,7 @@
 #include "InGameMenu.h"
 #include "MyCheckNull.h"
 #include "MenuSystem/MainMenu.h"
+#include "OnlineSubsystem.h"
 
 UPuzzlePlatformsGameInstance::UPuzzlePlatformsGameInstance(const FObjectInitializer& ObjectInitializer)
 {
@@ -23,6 +24,16 @@ void UPuzzlePlatformsGameInstance::Init()
 {
 	UE_LOG(LogTemp, Warning, TEXT("GameInstance Init"));
 	UE_LOG(LogTemp, Warning, TEXT("Class name: %s"), *(MenuClass->GetName()));
+	IOnlineSubsystem *Online =  IOnlineSubsystem::Get();
+	if (Online != nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Found online subsystem: %s"), *Online->GetSubsystemName().ToString());
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("No online subsystem found"))
+	}
+	MYCHECKNULL(Online);
 }
 
 void UPuzzlePlatformsGameInstance::BeginHosting()
